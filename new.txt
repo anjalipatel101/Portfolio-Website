@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of [Your Name], a Senior Computer Science Student" />
+  <meta name="author" content="[Your Name]" />
+  <title>[Your Name] - Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #3498db;
+      --dark: #2c3e50;
+      --accent: #e74c3c;
+      --light: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--dark);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background-color: var(--primary);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #c0392b;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .about-content img {
+      width: 200px;
+      height: 280px;
+      object-fit: cover;  
+      border-radius: 60%;  
+      border: 3px solid #fff; 
+    }
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .project-card {
+      width: 300px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .skills-list {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 2rem 1rem;
+      margin-top: 60px;
+    }
+
+    footer ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .project-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero" data-aos="fade-in">
+    <h1>Hi, I'm Anjali Patel</h1>
+    <p>Senior Computer Science Student & Aspiring Software Developer</p>
+    <a href="#about" class="cta-button">Learn More About Me</a>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="picture.jpg" />
+      <div>
+        <p> Hello there! My name is Anjali Patel, a soon-to-be Computer Science graduate in one month, I'm eager to jump into the technical world and into a full-time role. I’m passionate about data science, artificial intelligence, front-end development, and database management, and with only two courses remaining till I receive my Bachelor's in Computer Science, I'm on the lookout for rich learning and working opportunities. 
+
+          Over the years coupled with my academic studies, I’ve worked at multiple companies on a range of projects that have deepened my interest and honed my skills in these areas. Each project both in and outside of the classroom has been a chance to tackle new challenges and drive meaningful results in support of business goals. 
+          
+          I’m excited to connect with opportunities where I can apply what I’ve learned, continue growing, and contribute to innovative solutions. Please reach out if you're interested!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1" />
+        <h3>Cool App</h3>
+        <p>A productivity app built with React + Firebase.</p>
+        <a href="#">GitHub Repo</a>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2" />
+        <h3>Data Cruncher</h3>
+        <p>Python CLI tool that automates CSV transformations.</p>
+        <a href="#">GitHub Repo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills & Technologies</h2>
+    <div class="skills-list">
+      <h3>Programming Languages & Technologies</h3>
+      <ul>
+        <li>C++</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+  
+      <h3>Frameworks & Libraries</h3>
+      <ul>
+        <li>React</li>
+        <li>TensorFlow</li>
+        <li>scikit-learn</li>
+        <li>NumPy</li>
+        <li>SciPy</li>
+      </ul>
+  
+      <h3>Data Science & AI</h3>
+      <ul>
+        <li>Machine Learning</li>
+        <li>Artificial Intelligence</li>
+        <li>Big Data</li>
+        <li>Data Science</li>
+        <li>Computational Bioinformatics</li>
+      </ul>
+  
+      <h3>Tools & Platforms</h3>
+      <ul>
+        <li>GitHub</li>
+        <li>Jira</li>
+        <li>Google Collab / Jupyter Notebook</li>
+        <li>Microsoft Visual Studio</li>
+        <li>Visual Studio Code</li>
+        <li>Firebase</li>
+      </ul>
+  
+      <h3>Development Skills</h3>
+      <ul>
+        <li>Frontend Development</li>
+        <li>Software Engineering</li>
+        <li>Development of Cross-Platform Mobile Apps</li>
+        <li>Operating Systems</li>
+        <li>Data Structures</li>
+      </ul>
+  
+      <h3>Mathematics & Problem Solving</h3>
+      <ul>
+        <li>Calculus 2</li>
+        <li>Discrete Math</li>
+        <li>Problem Solving</li>
+      </ul>
+  
+      <h3>Other Skills</h3>
+      <ul>
+        <li>Cybersecurity Principles</li>
+        <li>Reporting and Technical Documentation</li>
+        <li>Microsoft Office Suite & Google Equivalents</li>
+        <li>Compilers</li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section id="resume" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>Download my full resume below:</p>
+    <a href="resume.pdf" class="cta-button" download>Download Resume</a>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form action="mailto:youremail@example.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    <ul>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="mailto:youremail@example.com">Email</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
